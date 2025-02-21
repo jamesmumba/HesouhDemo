@@ -6,6 +6,33 @@
     <title>About Us - HESOUH TECHNOLOGY SERVICE CO. LTD</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Add responsive styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column; /* Stack links vertically */
+                align-items: center; /* Center align links */
+            }
+            .about-content {
+                padding: 10px; /* Add padding for better spacing */
+            }
+            .industries-grid {
+                grid-template-columns: 1fr; /* Stack industries vertically */
+            }
+            .vision-list, .mission-list {
+                padding-left: 20px; /* Indent list items */
+            }
+            .craftsmanship {
+                display: flex; /* Use flexbox for layout */
+                flex-direction: column; /* Stack image and text vertically */
+                align-items: center; /* Center align items */
+            }
+            .craftsmanship img {
+                max-width: 100%; /* Ensure image is responsive */
+                height: auto; /* Maintain aspect ratio */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
