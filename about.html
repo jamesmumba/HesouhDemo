@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HESOUH TECHNOLOGY SERVICE CO. LTD</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/LOGO.jpeg" alt="HESOUH Technology" height="40px" width="auto">
+                </a>
+            </div>
+            <div class="menu-icon">
+                <img src="images/menu-regular-24.png" alt="Menu" class="menu-open">
+                <img src="images/x-circle-regular-24.png" alt="Close Menu" class="menu-close">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="get-quote-btn">Get Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Company Overview</h1>
+        </section>
+
+        <section class="about-content">
+            <div class="craftsmanship">
+                <img src="images/two cctv.jpg" alt="Construction Site">
+                <div class="text-content">
+                    <h2>Industries We Serve</h2>
+                    <div class="industries-grid">
+                        <div class="industry">
+                            <h3>Corporate & Commercial Enterprises</h3>
+                            <p>High-tech solutions for office buildings, business hubs, and financial centers.</p>
+                        </div>
+                        <div class="industry">
+                            <h3>Real Estate & Smart Homes</h3>
+                            <p>High-tech solutions for office buildings, business hubs, and financial centers.</p>
+                        </div>
+                        <div class="industry">
+                            <h3>Industrial & Manufacturing Facilities</h3>
+                            <p>Robust infrastructure for seamless operations and scalability</p>
+                        </div>
+                        <div class="industry">
+                            <h3>Educational Institutions</h3>
+                            <p>Smart classrooms, campus-wide security, and digital transformation solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vision-mission">
+                <div class="vision">
+                    <h3>Our Vision</h3>
+                    <p class="vision-description">We envision a future where technology, infrastructure, and sustainability seamlessly integrate to create smart, connected, and secure environments worldwide. Our vision is to:</p>
+                    <ul class="vision-list">
+                        <li>Be a Global Leader in Smart Technology & Infrastructure</li>
+                        <li>Build the Cities of Tomorrow</li>
+                        <li>Lead the Digital Transformation in Industries</li>
+                        <li>Champion Sustainable & Green Technologies</li>
+                        <li>Empower Communities & Enhance Lives</li>
+                        <li>Drive Continuous Innovation & Excellence</li>
+                    </ul>
+                </div>
+                <div class="mission">
+                    <h3>Our Mission</h3>
+                    <p class="mission-description">At Hesouh Technology Service Co., Ltd., our mission is to empower businesses, industries, and communities by delivering cutting-edge technology solutions and high-quality infrastructure development. We strive to:</p>
+                    <ul class="mission-list">
+                        <li>Deliver Uncompromising Quality</li>
+                        <li>Support 24/7 Operations & Reliability</li>
+                        <li>Foster Innovation & Continuous Improvement</li>
+                        <li>Revolutionize Smart Infrastructure</li>
+                        <li>Enhance Safety & Security</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="why-us">
+                <h2>Why Choose HESOUH</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Proven Track Record</h3>
+                        <p>Delivering successful projects on-time and on-budget while meeting strict customer specifications.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Expert Team</h3>
+                        <p>A dedicated team with years of experience in technology-driven solutions.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>End-to-End Service</h3>
+                        <p>From design and installation to maintenance and monitoring, we provide complete lifecycle solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Transform Your Vision into Reality</h2>
+            <p>Connect with us today to embark on a journey of innovation and excellence, backed by a team committed to delivering cutting-edge technology solutions.</p>
+            <a href="contact.html" class="get-quote-btn">Get Quote</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by splendormedia.org</p>
+    </footer>
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+        const body = document.body;
+
+        menuIcon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuIcon.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuIcon.contains(e.target) && !navLinks.contains(e.target)) {
+                menuIcon.classList.remove('active');
+                navLinks.classList.remove('active');
+                body.style.overflow = '';
+            }
+        });
+
+        // Prevent clicks inside the menu from closing it
+        navLinks.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+</html> 

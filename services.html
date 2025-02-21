@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - HESOUH TECHNOLOGY SERVICE CO. LTD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/LOGO.jpeg" alt="HESOUH Technology" height="40px" width="auto">
+                </a>
+            </div>
+            <div class="menu-icon">
+                <img src="images/menu-regular-24.png" alt="Menu" class="menu-open">
+                <img src="images/x-circle-regular-24.png" alt="Close Menu" class="menu-close">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="get-quote-btn">Get Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>COMING SOON</h1>
+        </section>
+    </main>    
+
+        
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+        const body = document.body;
+
+        menuIcon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuIcon.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuIcon.contains(e.target) && !navLinks.contains(e.target)) {
+                menuIcon.classList.remove('active');
+                navLinks.classList.remove('active');
+                body.style.overflow = '';
+            }
+        });
+
+        // Prevent clicks inside the menu from closing it
+        navLinks.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+</html> 
